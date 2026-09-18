@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aaradhya Makeover | Artist Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     ADMIN LOGIN
+========================================= -->
+
+<section
+    id="adminLogin"
+    class="admin-login"
+>
+
+    <div class="admin-login-card">
+
+        <div class="admin-logo">
+
+            <img
+                src="assets/aaradhya-makeover-logo.png"
+                alt="Aaradhya Makeover"
+            >
+
+        </div>
+
+
+        <p class="small-gold">
+            PRIVATE ARTIST AREA
+        </p>
+
+
+        <h1>
+            Artist
+            <span>Dashboard</span>
+        </h1>
+
+
+        <p class="login-description">
+            Manage your appointments and
+            customer requests.
+        </p>
+
+
+        <form id="adminLoginForm">
+
+
+            <div class="admin-input">
+
+                <label for="adminUsername">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="adminUsername"
+                    placeholder="Enter admin username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="admin-input">
+
+                <label for="adminPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Enter admin password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="gold-button"
+            >
+                Login to Dashboard
+            </button>
+
+
+            <p
+                id="adminLoginMessage"
+                class="admin-login-message"
+            ></p>
+
+
+        </form>
+
+
+        <a
+            href="index.html"
+            class="back-to-website"
+        >
+            ← Back to Aaradhya Makeover
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     DASHBOARD
+========================================= -->
+
+<div
+    id="adminDashboard"
+    class="admin-dashboard hidden"
+>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<header class="dashboard-header">
+
+
+    <div class="dashboard-brand">
+
+        <img
+            src="assets/aaradhya-makeover-logo.png"
+            alt="Aaradhya Makeover"
+        >
+
+        <div>
+
+            <h2>
+                Aaradhya Makeover
+            </h2>
+
+            <p>
+                Professional Artist Dashboard
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-actions">
+
+        <span class="artist-welcome">
+            Welcome, Artist
+        </span>
+
+        <button
+            id="adminLogout"
+            class="logout-button"
+            type="button"
+        >
+            Logout
+        </button>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =========================================
+     DASHBOARD CONTENT
+========================================= -->
+
+<main class="dashboard-main">
+
+
+    <div class="dashboard-title">
+
+        <div>
+
+            <p class="small-gold">
+                AARADHYA MAKEOVER
+            </p>
+
+            <h1>
+                Appointment Overview
+            </h1>
+
+            <p>
+                Keep track of your customer
+                appointments and requests.
+            </p>
+
+        </div>
+
+
+        <button
+            id="refreshAppointments"
+            class="refresh-button"
+            type="button"
+        >
+            ↻ Refresh
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         STATISTICS
+    ====================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📅
+            </div>
+
+            <div>
+
+                <p>
+                    Today's Appointments
+                </p>
+
+                <strong id="todayCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📆
+            </div>
+
+            <div>
+
+                <p>
+                    Upcoming
+                </p>
+
+                <strong id="upcomingCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🟡
+            </div>
+
+            <div>
+
+                <p>
+                    Pending
+                </p>
+
+                <strong id="pendingCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🟢
+            </div>
+
+            <div>
+
+                <p>
+                    Confirmed
+                </p>
+
+                <strong id="confirmedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         APPOINTMENT SECTION
+    ====================================== -->
+
+    <section class="appointments-section">
+
+
+        <div class="appointments-header">
+
+            <div>
+
+                <h2>
+                    Customer Appointments
+                </h2>
+
+                <p>
+                    View and manage appointment
+                    requests.
+                </p>
+
+            </div>
+
+
+            <div class="appointment-tools">
+
+                <input
+                    type="search"
+                    id="appointmentSearch"
+                    placeholder="Search customer..."
+                >
+
+
+                <select
+                    id="statusFilter"
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Confirmed">
+                        Confirmed
+                    </option>
+
+                    <option value="Cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             APPOINTMENT TABLE
+        ================================== -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Time
+                        </th>
+
+                        <th>
+                            Phone
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody
+                    id="appointmentsTable"
+                >
+
+                    <!--
+                        Appointments will be
+                        inserted here by JavaScript.
+                    -->
+
+                </tbody>
+
+            </table>
+
+
+            <div
+                id="noAppointments"
+                class="no-appointments"
+            >
+
+                <div>
+                    ✦
+                </div>
+
+                <h3>
+                    No appointments yet
+                </h3>
+
+                <p>
+                    Customer appointment requests
+                    will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         QUICK INFORMATION
+    ====================================== -->
+
+    <section class="dashboard-info">
+
+
+        <div class="info-card">
+
+            <div class="info-symbol">
+                ✦
+            </div>
+
+            <h3>
+                Your Beauty
+            </h3>
+
+            <p>
+                Our Passion
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-symbol">
+                ♡
+            </div>
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <p>
+                Every appointment matters.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-symbol">
+                ✧
+            </div>
+
+            <h3>
+                Aaradhya Experience
+            </h3>
+
+            <p>
+                Beauty with elegance.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="dashboard-footer">
+
+    <p>
+        © 2026 Aaradhya Makeover
+    </p>
+
+    <a href="index.html">
+        Visit Public Website
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

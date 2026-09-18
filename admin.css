@@ -1,0 +1,1015 @@
+/* =========================================
+   AARADHYA MAKEOVER
+   ARTIST DASHBOARD
+   PINK + GOLD PREMIUM DESIGN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7fa;
+    color: #4a2434;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.admin-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ffdce9,
+            #f4b5cb 45%,
+            #682943 100%
+        );
+}
+
+.admin-login-card {
+    width: min(460px, 100%);
+    padding: 50px 42px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(197, 155, 74, 0.45);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(70, 20, 40, 0.28);
+}
+
+
+/* =========================================
+   LOGIN LOGO
+========================================= */
+
+.admin-logo {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 15px;
+}
+
+.admin-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.small-gold {
+    color: #b88b32;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.admin-login-card h1 {
+    margin-top: 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 43px;
+
+    font-weight: normal;
+
+    color: #722e4b;
+}
+
+.admin-login-card h1 span {
+    display: block;
+
+    color: #b88b32;
+
+    font-size: 30px;
+
+    font-style: italic;
+}
+
+.login-description {
+    margin: 15px 0 30px;
+
+    color: #765766;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.admin-input {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.admin-input label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #63394a;
+}
+
+.admin-input input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #e2c2cd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #fffafd;
+
+    color: #4a2434;
+
+    transition: 0.3s;
+}
+
+.admin-input input:focus {
+    border-color: #c59b4a;
+
+    box-shadow:
+        0 0 0 3px rgba(197, 155, 74, 0.12);
+}
+
+
+/* =========================================
+   GOLD BUTTON
+========================================= */
+
+.gold-button {
+    width: 100%;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b78935,
+            #e3c47d
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(180, 130, 50, 0.25);
+
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(180, 130, 50, 0.35);
+}
+
+
+/* =========================================
+   LOGIN MESSAGE
+========================================= */
+
+.admin-login-message {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    color: #ad2f52;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BACK TO WEBSITE
+========================================= */
+
+.back-to-website {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #8a6330;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.back-to-website:hover {
+    color: #b78935;
+}
+
+
+/* =========================================
+   DASHBOARD HEADER
+========================================= */
+
+.admin-dashboard {
+    min-height: 100vh;
+
+    background: #fff7fa;
+}
+
+.dashboard-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    min-height: 85px;
+
+    padding: 12px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background:
+        rgba(255, 249, 251, 0.97);
+
+    border-bottom:
+        1px solid #edd7df;
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* =========================================
+   DASHBOARD BRAND
+========================================= */
+
+.dashboard-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.dashboard-brand img {
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+}
+
+.dashboard-brand h2 {
+    font-family: Georgia, serif;
+
+    color: #722e4b;
+
+    font-size: 21px;
+
+    font-weight: normal;
+}
+
+.dashboard-brand p {
+    margin-top: 3px;
+
+    color: #9a7180;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.dashboard-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.artist-welcome {
+    color: #70495a;
+
+    font-size: 14px;
+}
+
+.logout-button {
+    padding: 9px 17px;
+
+    border: 1px solid #c59b4a;
+
+    border-radius: 22px;
+
+    background: transparent;
+
+    color: #8a6330;
+
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background: #c59b4a;
+
+    color: white;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.dashboard-main {
+    width: min(1250px, 92%);
+
+    margin: auto;
+
+    padding: 55px 0 80px;
+}
+
+
+/* =========================================
+   DASHBOARD TITLE
+========================================= */
+
+.dashboard-title {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-title h1 {
+    margin-top: 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: normal;
+
+    color: #682b46;
+}
+
+.dashboard-title > div > p:last-child {
+    margin-top: 10px;
+
+    color: #80606d;
+}
+
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.refresh-button {
+    padding: 11px 20px;
+
+    border: 1px solid #d7b66b;
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: #8a6330;
+
+    transition: 0.3s;
+}
+
+.refresh-button:hover {
+    background: #c59b4a;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: white;
+
+    border:
+        1px solid #ecd9df;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(80, 25, 50, 0.05);
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(80, 25, 50, 0.09);
+}
+
+.stat-icon {
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff2f6;
+
+    font-size: 23px;
+}
+
+.stat-card p {
+    color: #866674;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    color: #722e4b;
+}
+
+
+/* =========================================
+   APPOINTMENTS SECTION
+========================================= */
+
+.appointments-section {
+    padding: 30px;
+
+    background: white;
+
+    border:
+        1px solid #ecd9df;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 25, 50, 0.06);
+}
+
+
+/* =========================================
+   APPOINTMENTS HEADER
+========================================= */
+
+.appointments-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.appointments-header h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    color: #682b46;
+}
+
+.appointments-header p {
+    margin-top: 5px;
+
+    color: #8a6976;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SEARCH & FILTER
+========================================= */
+
+.appointment-tools {
+    display: flex;
+
+    gap: 10px;
+}
+
+.appointment-tools input,
+.appointment-tools select {
+    padding: 11px 14px;
+
+    border:
+        1px solid #e4cdd5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fffafd;
+
+    color: #593444;
+}
+
+.appointment-tools input:focus,
+.appointment-tools select:focus {
+    border-color: #c59b4a;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+thead {
+    background: #fff5f8;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    color: #815568;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    border-bottom:
+        1px solid #ecd9df;
+}
+
+td {
+    padding: 18px 15px;
+
+    border-bottom:
+        1px solid #f1e2e7;
+
+    color: #654554;
+
+    font-size: 13px;
+}
+
+tbody tr {
+    transition: 0.25s;
+}
+
+tbody tr:hover {
+    background: #fffafd;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #fff1d5;
+
+    color: #966d1c;
+}
+
+.status-confirmed {
+    background: #e4f6ea;
+
+    color: #36794b;
+}
+
+.status-cancelled {
+    background: #fde5eb;
+
+    color: #a13d58;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+    display: flex;
+
+    gap: 7px;
+}
+
+.action-button {
+    padding: 7px 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    transition: 0.25s;
+}
+
+.confirm-button {
+    background: #e4f6ea;
+
+    color: #36794b;
+}
+
+.confirm-button:hover {
+    background: #36794b;
+
+    color: white;
+}
+
+.cancel-button {
+    background: #fde5eb;
+
+    color: #a13d58;
+}
+
+.cancel-button:hover {
+    background: #a13d58;
+
+    color: white;
+}
+
+.delete-button {
+    background: #f4edf0;
+
+    color: #795766;
+}
+
+.delete-button:hover {
+    background: #795766;
+
+    color: white;
+}
+
+
+/* =========================================
+   NO APPOINTMENTS
+========================================= */
+
+.no-appointments {
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.no-appointments > div {
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff2f6;
+
+    color: #c59b4a;
+
+    font-size: 25px;
+}
+
+.no-appointments h3 {
+    margin-top: 20px;
+
+    font-family: Georgia, serif;
+
+    color: #6d304b;
+
+    font-size: 24px;
+
+    font-weight: normal;
+}
+
+.no-appointments p {
+    margin-top: 8px;
+
+    color: #927482;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   INFO CARDS
+========================================= */
+
+.dashboard-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.info-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7a3152,
+            #a94d72
+        );
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px rgba(90, 30, 55, 0.12);
+}
+
+.info-symbol {
+    color: #e8cb8b;
+
+    font-size: 30px;
+}
+
+.info-card h3 {
+    margin-top: 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: normal;
+}
+
+.info-card p {
+    margin-top: 5px;
+
+    color: #f2dce5;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.dashboard-footer {
+    padding: 25px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #2b0c1b;
+
+    color: #b9919f;
+
+    font-size: 12px;
+}
+
+.dashboard-footer a {
+    color: #e3c47d;
+
+    transition: 0.3s;
+}
+
+.dashboard-footer a:hover {
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-title {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .dashboard-title .refresh-button {
+        align-self: flex-start;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .dashboard-header {
+        padding: 12px 4%;
+    }
+
+    .artist-welcome {
+        display: none;
+    }
+
+    .appointments-header {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .appointment-tools {
+        flex-direction: column;
+    }
+
+    .dashboard-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .admin-login {
+        padding: 15px;
+    }
+
+    .admin-login-card {
+        padding: 35px 25px;
+    }
+
+    .admin-login-card h1 {
+        font-size: 36px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointments-section {
+        padding: 20px;
+    }
+
+    .dashboard-main {
+        width: 94%;
+        padding-top: 35px;
+    }
+
+    .dashboard-brand h2 {
+        font-size: 17px;
+    }
+
+    .dashboard-brand p {
+        font-size: 9px;
+    }
+
+    .dashboard-brand img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logout-button {
+        padding: 8px 12px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+}
